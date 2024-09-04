@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import bg from '../../assets/bg.webp';
-import Content from './Content';
-import Why from './Why';
-import Navbar from '../nav/Navbar';
+import bg from '../../../assets/bg.webp';
 
-function Home() {
+
+function Landing() {
   useEffect(() => {
     AOS.init({
       duration: 1000, // duration of animation in milliseconds
@@ -17,7 +15,6 @@ function Home() {
 
   return (
     <>
-    <Navbar />
       <div
         className='bg-cover bg-center h-[85vh] opacity-85'
         style={{
@@ -28,15 +25,10 @@ function Home() {
         }}
       >
         <div className='py-10'>
-          <h2
-            className='flex justify-center text-[#fff] py-20 font-bold text-[30px]'
-            data-aos="fade-down"
-          >
-            Welcome To
-          </h2>
+          
 
           <h2
-            className='flex justify-center text-[#fff] font-bold text-[30px] lg:text-[40px]'
+            className='flex justify-center text-[#fff] pt-28 font-bold text-[30px] lg:text-[40px]'
             data-aos="fade-down"
             data-aos-delay="200"
           >
@@ -44,11 +36,11 @@ function Home() {
           </h2>
 
           <h2
-            className='flex justify-center text-[#fff] py-6 font-bold text-[15px] lg:text-[30px]'
+            className='flex justify-center text-[#fff] py-9 font-bold text-[15px] lg:text-[30px]'
             data-aos="fade-down"
             data-aos-delay="400"
           >
-            We provide you consult regarding development.
+           Your Digital Compass in IT Industry
           </h2>
 
           <div className="flex justify-center items-center py-6">
@@ -64,10 +56,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <Content />
-      <Why />
+      
     </>
   );
 }
 
-export default Home;
+export default Landing;
